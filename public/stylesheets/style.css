@@ -1,0 +1,35 @@
+a {
+  color: #00B7FF;
+}
+#myDiv {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#myData, #myData2 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#myData td, #myData th, #myData2 td, #myData2 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#myData2 tr:nth-child(even){background-color: #f2f2f2;}
+#myData tr:nth-child(even){background-color: #f2f2f2;}
+
+#myData tr:hover {background-color: #ddd;}
+#myData2 tr:hover {background-color: #ddd;}
+
+#myData th, #myData2 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3e83d8;
+  color: white;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}​

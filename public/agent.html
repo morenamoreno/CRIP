@@ -1,0 +1,84 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/popup.css">
+</head>
+<form id="loginform"  method="get" action="/">
+    <button id="btn-logout" style="float: right;">Logout</button>
+</form>
+
+<div id="myDiv">
+    <header>
+        <h1 style="background-color: darkblue;color: white;">&nbsp;Agent Dashboard</h1>
+    </header>
+
+    <body>
+        <h3 id="hClients">Clients</h3>
+        <table id="myData"></table>
+        <div class="container">
+            <div class="center">
+                <button id="showPopupB">Register a new Client</button>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div id="popup" class="modal-content">
+                <form id="newClient" class="form-container" onsubmit="return addClient();">
+                    <h1>Register a new Client</h1>
+                    <br><br>
+                    <label for="Name"><b>Name</b></label>
+                    <input id="fName" type="text" name="Name">
+                    <label for="psw"><b>Password</b></label>
+                    <input id="fPassword" type="password" name="Password">
+                    <label for="email"><b>Email</b></label>
+                    <input id="fEmail" type="text" name="Email">
+                    <label for="Lastname"><b>Surname</b></label>
+                    <input id="fsurname" type="text" name="surName">
+                    <label for="cpsw"><b>Password again</b></label>
+                    <input id="fcPassword" type="password" name="cPassword">
+                    <label for="phone"><b>Phone</b></label>
+                    <input id="fphone" type="text" name="Phone">
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="container">
+                        <div class="center">
+                            <button type="submit" class="btn cancel" onclick="document.querySelector('#showPopupB').addEventListener('click', ev => popup.style.display = 'none');">Cancel</button>
+                            <button id="addClientB" class="btn">Add Client </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <p>&nbsp;</p>
+        <h3 id="hPolicies">Policies</h3>
+        <table id="myData2"></table>
+        <div class="container" id="nPolicy" style="display: none";>
+            <div class="center">
+                <button id="showPolicyPopupB">Add new Policy</button>
+            </div>
+        </div>
+        <form id="newPolicy" class="form-container" style="display: none"; onsubmit="return addPolicy();">
+            <h3>Add Policy</h3>
+            <input id="myHidden" type="hidden" value="">
+            <label for="Description"><b>Description</b></label>
+            <input id="fDesc" type="text" name="Desc">
+
+            <label for="pType"><b>Type</b></label>
+            <input id="pType" type="text" name="Type">
+
+            <label for="valid"><b>Valid</b></label>
+            <input id="fvalid" type="text" name="Valid">
+            <hr>
+            <br>
+            <div class="container">
+                <div class="center">
+                    <button type="submit" class="btn cancel" onclick="document.querySelector('#newPolicy').addEventListener('click', ev => newPolicy.style.display = 'none');">Cancel</button>
+                    <button id="addPolicyB" class="btn">Add Policy</button>
+                </div>
+            </div>
+        </form>
+
+    </body>
+</div>
+<script src="javascripts/agent.js"></script>

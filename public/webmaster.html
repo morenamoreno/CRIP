@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<form id="loginform"  method="get" action="/">
+    <button id="btn-logout" style="float: right;">Logout</button>
+</form>
+
+<div id="myDiv">
+    <header>
+        <h1 style="background-color: darkorange;color: white;">Disclosures</h1>
+    </header>
+    <br>
+    <body>
+    <table id="myData"></table>
+
+    <form id="createNoD" class="form-container">
+        <h3>Create notice of Disclosure</h3>
+
+        <label for="clientID"><b>Client ID</b></label>
+        <input id="clientID" type="text">
+        <label for="email"><b>Beneficiary email</b></label>
+        <input id="email" type="text" name="Type">
+        <label for="token"><b>Token</b></label>
+        <input id="token" type="text" name="Type">
+        <label for="valid"><b>Valid until </b></label>
+        <input id="valid" type="text" name="Type">
+        <hr>
+        <br>
+        <div class="container">
+            <div class="center">
+                <button id="createNoDB" class="btn" onclick="createNoD();">Create</button>
+            </div>
+        </div>
+    </form>
+
+
+
+    </body>
+</div>
+<script src="javascripts/webmaster.js"></script>
+<script>
+    let myToken = Math.random().toString(36).slice(2);
+    document.getElementById("token").value=myToken;
+</script>

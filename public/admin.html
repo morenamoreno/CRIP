@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<form id="loginform"  method="get" action="/">
+    <button id="btn-logout" style="float: right;">Logout</button>
+</form>
+
+<div id="myDiv">
+    <header>
+        <h1 style="background-color: indianred;color: white;">Administrator Dashboard</h1>
+    </header>
+
+    <body>
+        <table id="myData">
+        </table>
+        <br/>
+        <p/>
+        <br/>
+        <form id="transferAgent" class="form-container">
+            <h3>Transfer Policy Holders</h3>
+
+            <label for="oldID"><b>From agent ID: </b></label>
+            <input id="oldID" type="text">
+
+            <label for="newID"><b>To Agent ID: </b></label>
+            <input id="newID" type="text" name="Type">
+
+            <hr>
+            <br>
+            <div class="container">
+                <div class="center">
+                    <button id="transferAgentB" class="btn" onclick="transferAgent();">Transfer</button>
+                </div>
+            </div>
+        </form>
+
+
+    </body>
+</div>
+<script src="javascripts/admin.js"></script>
